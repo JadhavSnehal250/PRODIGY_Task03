@@ -1,0 +1,68 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, rgb(233, 230, 230) 0%, rgb(211, 115, 115) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+      color: #cd2727;
+      font-family: "Playfair Display", serif;
+      font-optical-sizing: auto;
+    } 
+
+
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 2px; /* Adjust the gap between boxes */
+    margin-top: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #f9fcf9;
+    border: 1px solid #d41010; /* Border around each box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.box:nth-child(3n+1) {
+    border-left: none; /* Remove left border for every third box */
+}
+
+.box:nth-child(-n+3) {
+    border-top: none; /* Remove top border for the first row of boxes */
+}
+
+#restartBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+
+#restartBtn:hover {
+    background-color: #c31313;
+}
+
+/* Optional: Hover effect on boxes */
+.box:hover {
+    background-color: #f0f0f0;
+}
